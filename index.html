@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tailwind</title>
+	<link rel="stylesheet" href="dist/output.css">
+</head>
+<body>
+	<div class="bg-gray-50 min-h-screen">
+		<p class="text-center font-semibold text-lg text-slate-500 p-4">Started with Tailwind CSS</p>
+		<div class="flex items-center gap-4 p-8">
+			<div class="p-6 max-w-sm bg-white rounded-xl shadow-lg flex items-center space-x-4">
+				<div class="shrink-0">
+					<img src="./assets/images/chat.svg" class="h-12 w-12">
+				</div>
+				<div>
+					<div class="text-xl font-medium text-black">ChitChat</div>
+					<div class='text-slate-500'>You have a new message</div>
+				</div>
+			</div>
+		
+			<div class="py-8 px-8 max-w-sm bg-white shadow-lg rounded-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+				<img src="./assets/images/chat.svg" alt="" class="block mx-auto h-16 rounded-full sm:mx-0 sm:shrink-0">
+				<div class="text-center space-y-2 sm:text-left">
+					<div class="space-y-0.5">
+						<a class="text-sm text-black font-semibold hover:underline hover:cursor-pointer">
+							Nguyễn Văn Minh
+						</a>
+						<p  class="font-medium text-slate-500 text-sm">
+							Software Engineer
+						</p>
+					</div>
+					<button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="px-10 py-10 bg-white flex mx-auto gap-4">
+			<!-- List and table -->
+			<ul class="p-6 divide-y divide-slate-200 bg-white border-slate-200 border rounded-md" role="list" id="list-users">
+				<li class="flex py-4 first:pt-0 last:pb-0">
+					<img src="./assets/avatars/avatar1.png" alt="" class="h-10 w-10 rounded-full">
+					<div class="ml-3 overflow-hidden">
+						<p class="text-sm font-medium text-slate-900">Nguyen Van A</p>
+						<p class="text-sm text-slate-500 truncate">tuyen.tv184012@sis.hust.edu.vn</p>
+					</div>
+				</li>
+				<li class="flex py-4 first:pt-0 last:pb-0">
+					<img src="./assets/avatars/avatar1.png" alt="" class="h-10 w-10 rounded-full">
+					<div class="ml-3 overflow-hidden">
+						<p class="text-sm font-medium text-slate-900">Nguyen Van A</p>
+						<p class="text-sm text-slate-500 truncate">tuyen.tv184012@sis.hust.edu.vn</p>
+					</div>
+				</li>
+			</ul>
+			<div id="js-table " class="border-slate-200 border rounded-md">
+				<ul role="list" class="p-6 divide-y divide-slate-200">
+					<table>
+						<thead class="bg-slate-50 border-b border-slate-200">
+							<tr class="odd:bg-white even:bg-slate-50">
+								<th class="px-6 py-3 text-left text-sm font-medium text-slate-900">Full name</th>
+								<th class="px-6 py-3 text-left text-sm font-medium text-slate-900">Job title</th>
+								<th class="px-6 py-3 text-left text-sm font-medium text-slate-900">Email</th>
+							</tr>
+						</thead>
+						<tbody id="js-table-body"> 
+							<tr class="odd:bg-white even:bg-slate-50">
+								<td class="px-6 py-3 text-left text-sm font-medium text-slate-900 whitespace-nowrap">Nguyen Van A</td>
+								<td class="px-6 py-3 text-left text-sm font-normal text-slate-600 whitespace-nowrap" >Software Engineer</td>
+								<td class="px-6 py-3 text-left text-sm font-medium text-slate-600 whitespace-nowrap">a.nguyen@gmail.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</ul>
+			</div>
+			<!-- form -->
+			<form class="max-w-md border-slate-200 border p-4 rounded-md">
+				<label class="block">
+					<span class="text-sm font-medium text-slate-700">Username</span>
+					<input type="text" value="tbone" disabled class="mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 
+					focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+					disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+					invalid:border-pink-500 invalid:text-pink-500
+					focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+					">
+				</label>
+				<label class="block">
+					<span class="text-sm font-medium text-slate-700">Email</span>
+					<input type="email" placeholder="Email" class="mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 
+					focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+					disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+					invalid:border-pink-500 invalid:text-pink-500
+					focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+					">
+				</label>
+
+				<label class="block">
+					<span class="text-sm font-medium text-slate-700">Password</span>
+					<input type="password" placeholder="Password" class="mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 
+					focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+					disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+					invalid:border-pink-500 invalid:text-pink-500
+					focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+					">
+				</label>
+				<div class="flex flex-row items-center gap-1">
+					<button class="w-full mt-4 text-sm border border-slate-200 py-1.5 rounded-md text-white bg-red-500">Cancel</button>
+					<button class="w-full mt-4 text-sm border border-slate-200 py-1.5 rounded-md text-white bg-sky-600">Save</button>
+				</div>
+			</form>
+		</div>
+
+	</div>
+	<script src="./src/index.js"></script>
+</body>
+</html>
